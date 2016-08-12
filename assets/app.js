@@ -73,7 +73,7 @@
 
   function _randomizeWords() {
     _words.forEach(function(eCollection, eIndex) {
-      $(WORD_SELECTORS[eIndex]).slick('slickGoTo', Math.floor(Math.random() * eCollection.length);
+      $(WORD_SELECTORS[eIndex]).slick('slickGoTo', Math.floor(Math.random() * eCollection.length));
     });
   }
 
