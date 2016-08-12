@@ -71,6 +71,12 @@
     return eSliderElem.find('.slick-current label').html();
   }
 
+  function _randomizeWords() {
+    _words.forEach(function(eCollection, eIndex) {
+      $(WORD_SELECTORS[eIndex]).slick('slickGoTo', Math.floor(Math.random() * eCollection.length);
+    });
+  }
+
   function _initalizeListeners() {
     firebase.database().ref(STATUS_REF).on('value', function(eSnapshot) {
       var status;
@@ -81,12 +87,6 @@
         _revive();
       }
     });
-
-    // firebase.database().ref(SESSIONS_REF).on('child_added', function(eSnapshot) {
-    //   var sessionsCount;
-    //   sessionsCount = eSnapshot.numChildren();
-    //   _sendDelay = sessionsCount * SEND_DELAY_PER_USER;
-    // });
   }
 
   function _checkInitialStatus() {
@@ -146,6 +146,8 @@
       WORD_SELECTORS.forEach(function(eItem) {
         msg.push(_currentSlideWord($(eItem)));
       });
+
+      _randomizeWords();
 
       _send(msg.join(' '));
     });
