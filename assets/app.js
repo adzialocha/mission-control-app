@@ -12,7 +12,7 @@
   var WORDS_PATH = '/words.json';
   var WORD_SELECTORS = ['#word-1', '#word-2', '#word-3'];
 
-  var SLIDER_SPEED = 700;
+  var SLIDER_SPEED = 300;
   var SEND_DELAY_MIN = 3000;
 
   var _words;
