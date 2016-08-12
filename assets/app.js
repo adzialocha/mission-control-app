@@ -138,6 +138,8 @@
       window.setTimeout(function() {
         $button.removeAttr('disabled');
         $button.removeClass('loading');
+
+        _randomizeWords();
       }, _sendDelay);
 
       msg = [];
@@ -145,8 +147,6 @@
       WORD_SELECTORS.forEach(function(eItem) {
         msg.push(_currentSlideWord($(eItem)));
       });
-
-      _randomizeWords();
 
       _send(msg.join(' '));
     });
