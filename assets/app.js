@@ -13,8 +13,7 @@
   var WORD_SELECTORS = ['#word-1', '#word-2', '#word-3'];
 
   var SLIDER_SPEED = 700;
-  var SEND_DELAY_MIN = 2500;
-  var SEND_DELAY_PER_USER = 500;
+  var SEND_DELAY_MIN = 3000;
 
   var _words;
 
